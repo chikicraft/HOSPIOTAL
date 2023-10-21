@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<nav>
+    <h3>HOSPITAL SEMPITERNO</h3>
+    
+    
+    
+
+
+</nav>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOSPITAL </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+
+
+</head>
+
+
+
+<body>
+
+    
+
+   
+    <img src = "{% static 'css/img/Logotipo librería vintage elegante gris.png' %}" height="100" width="100" class="d-inline-block align-top">
+
+ 
+    <form method="POST" action="/emp">
+        {% csrf_token %}
+        <div>
+            <br>
+            <p>
+               
+            </p>
+            <div>
+                <p>NOMBRE DEL LIBRO:</p>{{ form.eid }}
+            </div>
+            <div>
+                <p>NOMBRE DEL PACIENTE:</p>{{ form.paciente}}
+            </div>
+            <div>
+                <p>FECHA Y HORA:</p>{{ form.fecha_hora }}
+            </div>
+            <div>
+                <p> NOMBRE DEL MEDICO:</p>{{ form.medico }}
+            </div>
+            <div>
+                <p>SUGERENCIAS DE EMPAQUETADO:</p>{{ form.medico }}
+            </div>
+            <div>
+                <p>DIRECCION:</p>{{ form.medico }}
+            </div>
+            
+            <div>
+                <br>
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+
+
+
+</body>
+
+</html>

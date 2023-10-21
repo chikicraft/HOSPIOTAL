@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Record</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  
+</head>
+
+<img src="IMG/Logotipo librería vintage elegante gris.png" alt="">
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>NOMBRE DEL LIBRO</th>
+                <th>NOMBRE DEL PACIENTE</th>
+                <th>FECHA_HORA</th>
+                <th>NUMERO DE TELEFONO</th>
+                <th>SUGERENCIA DE EMPAQUETADO</th>
+                <th>NOMBRE DEL MEDICO</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in employees %}
+            <tr>
+                <td>{{ employee.eid }}</td>
+                <td>{{employee.paciente}}</td>
+                <td>{{employee.fecha_hora}}</td>
+                <td>{{employee.medico}}</td>
+                <td>{{employee.medico}}</td>
+                <td>{{employee.medico}}</td>
+                <td>
+                    <a href="/edit/{{ employee.id }}">Edit</a>
+                    <a href="/delete/{{employee.id}}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <button><a style="color:rgba(41, 35, 35, 0.295);" href="/emp">Add New Record</a></button>
+
+
+
+</body>
+
+</html>
